@@ -93,12 +93,12 @@ def helpmessage():
                   "╠➥ About" + "\n" + \
                   "║" + "\n" + \
                   "╠✪〘 Settings 〙✪═══════" + "\n" + \
-                  "╠➥ AutoAdd「On/Off」" + "\n" + \
-                  "╠➥ AutoJoin「On/Off」" + "\n" + \
-                  "╠➥ AutoLeave「On/Off」" + "\n" + \
-                  "╠➥ AutoRead「On/Off」" + "\n" + \
-                  "╠➥ CheckSticker「On/Off」" + "\n" + \
-                  "╠➥ DetectMention「On/Off」" + "\n" + \
+                  "╠➥ AutoAdd「On / Off」" + "\n" + \
+                  "╠➥ AutoJoin「On / Off」" + "\n" + \
+                  "╠➥ AutoLeave「On / Off」" + "\n" + \
+                  "╠➥ AutoRead「On / Off」" + "\n" + \
+                  "╠➥ CheckSticker「On / Off」" + "\n" + \
+                  "╠➥ DetectMention「On / Off」" + "\n" + \
                   "║" + "\n" + \
                   "╠✪〘 Self 〙✪═════════" + "\n" + \
                   "╠➥ Me" + "\n" + \
@@ -108,14 +108,14 @@ def helpmessage():
                   "╠➥ MyPicture" + "\n" + \
                   "╠➥ MyVideoProfile" + "\n" + \
                   "╠➥ MyCover" + "\n" + \
-                  "╠➥ StealContact「Mention」" + "\n" + \
-                  "╠➥ StealMid「Mention」" + "\n" + \
-                  "╠➥ StealName「Mention」" + "\n" + \
-                  "╠➥ StealBio「Mention」" + "\n" + \
-                  "╠➥ StealPicture「Mention」" + "\n" + \
-                  "╠➥ StealVideoProfile「Mention」" + "\n" + \
-                  "╠➥ StealCover「Mention」" + "\n" + \
-                  "╠➥ CloneProfile「Mention」" + "\n" + \
+                  "╠➥ StealContact「Tag」" + "\n" + \
+                  "╠➥ StealMid「Tag」" + "\n" + \
+                  "╠➥ StealName「Tag」" + "\n" + \
+                  "╠➥ StealBio「Tag」" + "\n" + \
+                  "╠➥ StealPicture「Tag」" + "\n" + \
+                  "╠➥ StealVideoProfile「Tag」" + "\n" + \
+                  "╠➥ StealCover「Tag」" + "\n" + \
+                  "╠➥ CloneProfile「Tag」" + "\n" + \
                   "╠➥ RestoreProfile" + "\n" + \
                   "║" + "\n" + \
                   "╠✪〘 Group 〙✪════════" + "\n" + \
@@ -124,34 +124,34 @@ def helpmessage():
                   "╠➥ GroupName" + "\n" + \
                   "╠➥ GroupPicture" + "\n" + \
                   "╠➥ GroupTicket" + "\n" + \
-                  "╠➥ GroupTicket「On/Off」" + "\n" + \
+                  "╠➥ GroupTicket「On / Off」" + "\n" + \
                   "╠➥ GroupList" + "\n" + \
                   "╠➥ GroupMemberList" + "\n" + \
                   "╠➥ GroupInfo" + "\n" + \
-                  "╠➥ Kill「Mention」" + "\n" + \
-                  "╠➥ KickAllMember"+ "\n" + \
+                  "╠➥ Kill「Tag」" + "\n" + \
+                  "╠➥ InvGroupCall"+ "\n" + \
                   "║" + "\n" + \
                   "╠✪〘 Special 〙✪═══════" + "\n" + \
-                  "╠➥ Mimic「On/Off」" + "\n" + \
+                  "╠➥ Mimic「On / Off」" + "\n" + \
                   "╠➥ MimicList" + "\n" + \
-                  "╠➥ MimicAdd「Mention」" + "\n" + \
-                  "╠➥ MimicDel「Mention」" + "\n" + \
-                  "╠➥ Mention" + "\n" + \
-                  "╠➥ Lurking「Oɴ/Off/Reset」" + "\n" + \
-                  "╠➥ Lurking" + "\n" + \
+                  "╠➥ MimicAdd「Tag」" + "\n" + \
+                  "╠➥ MimicDel「Tag」" + "\n" + \
+                  "╠➥ TagAllMember" + "\n" + \
+                  "╠➥ Sider「Oɴ / Off / Reset」" + "\n" + \
+                  "╠➥ ViewLastSeen" + "\n" + \
                   "║" + "\n" + \
                   "╠✪〘 Media 〙✪════════" + "\n" + \
                   "╠➥ Kalender" + "\n" + \
-                  "╠➥ CheckDate「Date」" + "\n" + \
-                  "╠➥ InstagramInfo「UserName」" + "\n" + \
-                  "╠➥ InstagramPost「UserName」" + "\n" + \
+                  "╠➥ CheckDate「Tanggal」" + "\n" + \
+                  "╠➥ InstagramInfo「User Name」" + "\n" + \
+                  "╠➥ InstagramPost「User Name」" + "\n" + \
                   "╠➥ SearchYoutube「Search」" + "\n" + \
                   "╠➥ SearchMusic「Search」" + "\n" + \
                   "╠➥ SearchLyric「Search」" + "\n" + \
                   "╠➥ SearchImage「Search」" + "\n" + \
                   "╠➥ ScreenshootWebsite「LinkUrl」" + "\n" + \
                   "║" + "\n" + \
-                  "╚═〘 Credits By: Krisnabiru  〙"
+                  "╚═〘 Thanks to : Krisnabiru  〙"
     return helpMessage
     
 def helptexttospeech():
@@ -363,14 +363,14 @@ def lineBot(op):
 #==============================================================================#
                 if text.lower() == 'help':
                     helpMessage = helpmessage()
-                    nadya.sendMessage(to, str(helpMessage))
+                    nadya.sendMessage(to, str(helpMessage), contentMetadata = {'AGENT_ICON': 'http://dl.profile.line-cdn.net/'+client.getContact(clientMid).pictureStatus, 'AGENT_NAME': 'Krisnabiru', 'AGENT_LINK': 'https://bit.ly/2skbvr2'})
                     nadya.sendContact(to, "uac44837d56e41d7aa87a08e0035f436a")
                 elif text.lower() == 'texttospeech':
                     helpTextToSpeech = helptexttospeech()
-                    nadya.sendMessage(to, str(helpTextToSpeech))
+                    nadya.sendMessage(to, str(helpTextToSpeech), contentMetadata = {'AGENT_ICON': 'http://dl.profile.line-cdn.net/'+client.getContact(clientMid).pictureStatus, 'AGENT_NAME': 'Krisnabiru', 'AGENT_LINK': 'https://bit.ly/2skbvr2'})
                 elif text.lower() == 'translate':
                     helpTranslate = helptranslate()
-                    nadya.sendMessage(to, str(helpTranslate))
+                    nadya.sendMessage(to, str(helpTranslate), contentMetadata = {'AGENT_ICON': 'http://dl.profile.line-cdn.net/'+client.getContact(clientMid).pictureStatus, 'AGENT_NAME': 'Krisnabiru', 'AGENT_LINK': 'https://bit.ly/2skbvr2'})
 #==============================================================================#
                 elif text.lower() == 'speed':
                     start = time.time()
@@ -404,7 +404,7 @@ def lineBot(op):
                         ret_ += "\n╠══[ About Selfbot ]"
                         ret_ += "\n╠ Version : Beta Test"
                         ret_ += "\n╠ Creator : {}".format(creator.displayName)
-                        ret_ += "\n╚══[ Dilarang remake tanpa izin cok :D ]"
+                        ret_ += "\n╚══[ Dilarang remake tanpa izin jancok :D ]"
                         nadya.sendMessage(to, str(ret_))
                     except Exception as e:
                         nadya.sendMessage(msg.to, str(e))
@@ -430,43 +430,43 @@ def lineBot(op):
                         nadya.sendMessage(msg.to, str(e))
                 elif text.lower() == 'autoadd on':
                     settings["autoAdd"] = True
-                    nadya.sendMessage(to, "Berhasil mengaktifkan Auto Add")
+                    nadya.sendMessage(to, "Auto add aktif")
                 elif text.lower() == 'autoadd off':
                     settings["autoAdd"] = False
-                    nadya.sendMessage(to, "Berhasil menonaktifkan Auto Add")
+                    nadya.sendMessage(to, "Auto add tidak aktif")
                 elif text.lower() == 'autojoin on':
                     settings["autoJoin"] = True
-                    nadya.sendMessage(to, "Berhasil mengaktifkan Auto Join")
+                    nadya.sendMessage(to, "Auto join aktif")
                 elif text.lower() == 'autojoin off':
                     settings["autoJoin"] = False
-                    nadya.sendMessage(to, "Berhasil menonaktifkan Auto Join")
+                    nadya.sendMessage(to, "Auto join tidak aktif")
                 elif text.lower() == 'autoleave on':
                     settings["autoLeave"] = True
-                    nadya.sendMessage(to, "Berhasil mengaktifkan Auto Leave")
+                    nadya.sendMessage(to, "Auto leave aktif")
                 elif text.lower() == 'autojoin off':
                     settings["autoLeave"] = False
-                    nadya.sendMessage(to, "Berhasil menonaktifkan Auto Leave")
+                    nadya.sendMessage(to, "Auto leave tidak aktif")
                 elif text.lower() == 'autoread on':
                     settings["autoRead"] = True
-                    nadya.sendMessage(to, "Berhasil mengaktifkan Auto Read")
+                    nadya.sendMessage(to, "Auto read aktif")
                 elif text.lower() == 'autoread off':
                     settings["autoRead"] = False
-                    nadya.sendMessage(to, "Berhasil menonaktifkan Auto Read")
+                    nadya.sendMessage(to, "Auto read tidak aktif")
                 elif text.lower() == 'checksticker on':
                     settings["checkSticker"] = True
-                    nadya.sendMessage(to, "Berhasil mengaktifkan Check Details Sticker")
+                    nadya.sendMessage(to, "Check details sticker aktif")
                 elif text.lower() == 'checksticker off':
                     settings["checkSticker"] = False
-                    nadya.sendMessage(to, "Berhasil menonaktifkan Check Details Sticker")
+                    nadya.sendMessage(to, "Check details sticker tidak aktif")
                 elif text.lower() == 'detectmention on':
                     settings["datectMention"] = True
-                    nadya.sendMessage(to, "Berhasil mengaktifkan Detect Mention")
+                    nadya.sendMessage(to, "Detect mention aktif")
                 elif text.lower() == 'detectmention off':
                     settings["datectMention"] = False
-                    nadya.sendMessage(to, "Berhasil menonaktifkan Detect Mention")
+                    nadya.sendMessage(to, "Detect mention tidak aktif")
                 elif text.lower() == 'clonecontact':
                     settings["copy"] = True
-                    nadya.sendMessage(to, "Kirim contact yang mau di copy")
+                    nadya.sendMessage(to, "Kirim kontak yang mau di copy")
 #==============================================================================#
                 elif text.lower() == 'me':
                     sendMessageWithMention(to, nadyaMID)
@@ -740,7 +740,7 @@ def lineBot(op):
                         ret_ += "\n╚══[ Total {} Groups ]".format(str(len(groups)))
                         nadya.sendMessage(to, str(ret_))
 #==============================================================================#          
-                elif text.lower() == 'mention':
+                elif text.lower() == 'tagallmember':
                     group = nadya.getGroup(msg.to)
                     nama = [contact.mid for contact in group.members]
                     k = len(nama)//100
@@ -753,8 +753,8 @@ def lineBot(op):
                             s += 7
                             txt += u'@Alin \n'
                         nadya.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
-                        nadya.sendMessage(to, "Total {} Mention".format(str(len(nama))))          
-                elif text.lower() == 'lurking on':
+                        nadya.sendMessage(to, "Total {} mention".format(str(len(nama))))          
+                elif text.lower() == 'sider on':
                     tz = pytz.timezone("Asia/Jakarta")
                     timeNow = datetime.now(tz=tz)
                     day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
@@ -780,7 +780,7 @@ def lineBot(op):
                             read['ROM'][msg.to] = {}
                             with open('read.json', 'w') as fp:
                                 json.dump(read, fp, sort_keys=True, indent=4)
-                                nadya.sendMessage(msg.to,"Lurking already on")
+                                nadya.sendMessage(msg.to,"Sider already on")
                     else:
                         try:
                             del read['readPoint'][msg.to]
@@ -796,7 +796,7 @@ def lineBot(op):
                             json.dump(read, fp, sort_keys=True, indent=4)
                             nadya.sendMessage(msg.to, "Set reading point:\n" + readTime)
                             
-                elif text.lower() == 'lurking off':
+                elif text.lower() == 'sider off':
                     tz = pytz.timezone("Asia/Jakarta")
                     timeNow = datetime.now(tz=tz)
                     day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
@@ -810,7 +810,7 @@ def lineBot(op):
                         if bln == str(k): bln = bulan[k-1]
                     readTime = hasil + ", " + timeNow.strftime('%d') + " - " + bln + " - " + timeNow.strftime('%Y') + "\nJam : [ " + timeNow.strftime('%H:%M:%S') + " ]"
                     if msg.to not in read['readPoint']:
-                        nadya.sendMessage(msg.to,"Lurking already off")
+                        nadya.sendMessage(msg.to,"sider already off")
                     else:
                         try:
                             del read['readPoint'][msg.to]
@@ -820,7 +820,7 @@ def lineBot(op):
                               pass
                         nadya.sendMessage(msg.to, "Delete reading point:\n" + readTime)
     
-                elif text.lower() == 'lurking reset':
+                elif text.lower() == 'sider reset':
                     tz = pytz.timezone("Asia/Jakarta")
                     timeNow = datetime.now(tz=tz)
                     day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
@@ -842,9 +842,9 @@ def lineBot(op):
                             pass
                         nadya.sendMessage(msg.to, "Reset reading point:\n" + readTime)
                     else:
-                        nadya.sendMessage(msg.to, "Lurking belum diaktifkan ngapain di reset?")
+                        nadya.sendMessage(msg.to, "Sider belum diaktifkan ngapain di reset?")
                         
-                elif text.lower() == 'lurking':
+                elif text.lower() == 'sider':
                     tz = pytz.timezone("Asia/Jakarta")
                     timeNow = datetime.now(tz=tz)
                     day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
@@ -878,14 +878,14 @@ def lineBot(op):
                             zx = {'S':xlen, 'E':xlen2, 'M':cmem[x].mid}
                             zx2.append(zx)
                             zxc += pesan2
-                        text = xpesan+ zxc + "\n[ Lurking time ]: \n" + readTime
+                        text = xpesan+ zxc + "\n[ Waktu sider ]: \n" + readTime
                         try:
                             nadya.sendMessage(receiver, text, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
                         except Exception as error:
                             print (error)
                         pass
                     else:
-                        nadya.sendMessage(receiver,"Lurking has not been set.")
+                        nadya.sendMessage(receiver,"Sider has not been set.")
 #==============================================================================#
                 elif msg.text.lower().startswith("say-af "):
                     sep = text.split(" ")
@@ -2175,7 +2175,7 @@ def lineBot(op):
                                 ret_ += "\n╠ Nama lagu : {}".format(str(song[0]))
                                 ret_ += "\n╠ Durasi : {}".format(str(song[1]))
                                 ret_ += "\n╠ Link : {}".format(str(song[4]))
-                                ret_ += "\n╚══[ reading Audio ]"
+                                ret_ += "\n╚══[ Reading Audio ]"
                                 nadya.sendMessage(to, str(ret_))
                                 nadya.sendAudioWithURL(to, song[3])
                         except:
@@ -2201,7 +2201,7 @@ def lineBot(op):
                                 ret_ += "\n╠ Nama lagu : {}".format(str(song[0]))
                                 ret_ += "\n╠ Durasi : {}".format(str(song[1]))
                                 ret_ += "\n╠ Link : {}".format(str(song[4]))
-                                ret_ += "\n╚══[ Finish ]\n{}".format(str(lyric))
+                                ret_ += "\n╚══[ Done ]\n{}".format(str(lyric))
                                 nadya.sendMessage(to, str(ret_))
                         except:
                             nadya.sendMessage(to, "Lirik tidak ditemukan")
@@ -2218,6 +2218,145 @@ def lineBot(op):
                     ret_ += "\n╚══[ Finish ]"
                     nadya.sendMessage(to, str(ret_))
                     
+#===============================================================================[NEW]                    
+                    
+            
+            elif msg.text.lower().startswith("checkpraytime "):    
+                sep = text.split(" ")
+                location = text.replace(sep[0] + " ","")
+                with requests.session() as web:
+                    web.headers["user-agent"] = random.choice(settings["userAgent"])
+                    r = web.get("http://api.corrykalam.net/apisholat.php?lokasi={}".format(urllib.parse.quote(location)))
+                    data = r.text
+                    data = json.loads(data)
+                    if data[1] != "Subuh : " and data[2] != "Dzuhur : " and data[3] != "Ashr : " and data[4] != "Maghrib : " and data[5] != "Isha : ":
+                        ret_ = "╔══[ Prayer Schedule ]"
+                        ret_ += "\n╠ Lokasi : " + data[0]
+                        ret_ += "\n╠ " + data[1]
+                        ret_ += "\n╠ " + data[2]
+                        ret_ += "\n╠ " + data[3]
+                        ret_ += "\n╠ " + data[4]
+                        ret_ += "\n╠ " + data[5]
+                        ret_ += "\n╚══[ Complete ]"
+                    else:
+                        ret_ = "[ Prayer Schedule ] Error : Lokasi tidak ditemukan" 
+                        nadya.sendMessage(to, str(ret_))
+                        
+            elif msg.text.lower().startswith("checkweather "):       
+                sep = text.split(" ")
+                location = text.replace(sep[0] + " ","")
+                with requests.session() as web:
+                    web.headers["user-agent"] = random.choice(settings["userAgent"])
+                    r = web.get("http://api.corrykalam.net/apicuaca.php?kota={}".format(urllib.parse.quote(location)))
+                    data = r.text
+                    data = json.loads(data)
+                    if "result" not in data:
+                        ret_ = "╔══[ Weather Status ]"
+                        ret_ += "\n╠ Lokasi : " + data[0].replace("Temperatur di kota ","")
+                        ret_ += "\n╠ Suhu : " + data[1].replace("Suhu : ","")
+                        ret_ += "\n╠ Kelembaban : " + data[2].replace("Kelembaban : ","")
+                        ret_ += "\n╠ Tekanan Udara : " + data[3].replace("Tekanan udara : ","")
+                        ret_ += "\n╠ Kecepatan Angin : " + data[4].replace("Kecepatan angin : ","")
+                        ret_ += "\n╚══[ Complete ]"
+                    else:
+                        ret_ = "[ Weather Status ] Error : Lokasi tidak ditemukan"
+                        nadya.sendMessage(to, str(ret_))
+                        
+            elif msg.text.lower().startswith("checklocation "):   
+                sep = text.split(" ")
+                location = text.replace(sep[0] + " ","")
+                with requests.session() as web:
+                    web.headers["user-agent"] = random.choice(settings["userAgent"])
+                    r = web.get("http://api.corrykalam.net/apiloc.php?lokasi={}".format(urllib.parse.quote(location)))
+                    data = r.text
+                    data = json.loads(data)
+                    if data[0] != "" and data[1] != "" and data[2] != "":
+                        link = "https://www.google.co.id/maps/@{},{},15z".format(str(data[1]), str(data[2]))
+                        ret_ = "╔══[ Details Location ]"
+                        ret_ += "\n╠ Lokasi : " + data[0]
+                        ret_ += "\n╠ Google Maps : " + link
+                        ret_ += "\n╚══[ Complete ]"
+                    else:
+                        ret_ = "[ Details Location ] Error : Lokasi tidak ditemukan"
+                        nadya.sendMessage(to,str(ret_))
+                # Check if only image
+                
+            elif text.lower() == 'cpp':
+                settings["changePicture"] = True
+                nadya.sendMessage(to, "Silahkan kirim gambarnya")
+                
+            elif text.lower() == 'cgp':
+                if msg.toType == 2:
+                    if to not in settings["changeGroupPicture"]:
+                        settings["changeGroupPicture"].append(to)
+                        nadya.sendMessage(to, "Silahkan kirim gambarnya")
+                
+            elif msg.contentType == 1:
+                if settings["changePicture"] == True:
+                    path = nadya.downloadObjectMsg(msg_id)
+                    settings["changePicture"] = False
+                    nadya.updateProfilePicture(path)
+                    nadya.sendMessage(to, "Berhasil mengubah foto profile")
+                if msg.toType == 2:
+                    if to in settings["changeGroupPicture"]:
+                        path = nadya.downloadObjectMsg(msg_id)
+                        settings["changeGroupPicture"].remove(to)
+                        nadya.updateGroupPicture(to, path)
+                        nadya.sendMessage(to, "Berhasil mengubah foto group")   
+                            
+            elif text.lower() == 'rejectall':
+                ginvited = nadya.ginvited
+                if ginvited != [] and ginvited != None:
+                    for gid in ginvited:
+                        nadya.rejectGroupInvitation(gid)
+                        nadya.sendMessage(to, "Berhasil tolak sebanyak {} undangan".format(str(len(ginvited))))
+                else:
+                    nadya.sendMessage(to, "Tidak ada undangan yang tertunda")
+            
+            elif text.lower() == 'invgroupcall':    
+                if msg.toType == 2:
+                    group = nadya.getGroup(to)
+                    members = [mem.mid for mem in group.members]
+                    call.acquireGroupCallRoute(to)
+                    call.inviteIntoGroupCall(to, contactIds=members)
+                    nadya.sendMessage(to, "Berhasil mengundang kedalam group call")
+                    
+            elif text.lower() == 'removeallchat':
+                nadya.removeAllMessages(op.param2)
+                nadya.sendMessage(to, "Berhasil hapus semua chat")
+
+            elif text.lower() == 'time':
+                nadya.sendMessage(to, "Goblok cek sendiri di tanggal jangan manja")
+                
+
+            elif msg.text.lower().startswith("gbroadcast "):   
+                sep = text.split(" ")
+                txt = text.replace(sep[0] + " ","")
+                groups = nadya.groups
+                for group in groups:
+                    nadya.sendMessage(group, "[ Broadcast ]\n{}".format(str(txt)))
+                    nadya.sendMessage(to, "Berhasil broadcast ke {} group".format(str(len(groups))))
+                    
+            elif msg.text.lower().startswith("fbroadcast "):   
+                sep = text.split(" ")
+                txt = text.replace(sep[0] + " ","")
+                friends = nadya.friends
+                for friend in friends:
+                    nadya.sendMessage(friend, "[ Broadcast ]\n{}".format(str(txt)))
+                    nadya.sendMessage(to, "Berhasil broadcast ke {} teman".format(str(len(friends))))
+            elif msg.text.lower().startswith("allbroadcast "):   
+                sep = text.split(" ")
+                txt = text.replace(sep[0] + " ","")
+                friends = nadya.friends
+                groups = nadya.groups
+                for group in groups:
+                    nadya.sendMessage(group, "[ Broadcast ]\n{}".format(str(txt)))
+                    nadya.sendMessage(to, "Berhasil broadcast ke {} group".format(str(len(groups))))
+                for friend in friends:
+                    nadya.sendMessage(friend, "[ Broadcast ]\n{}".format(str(txt)))
+                    nadya.sendMessage(to, "Berhasil broadcast ke {} teman".format(str(len(friends))))                             
+                                    
+#===============================================================================#
             elif msg.contentType == 13:
                 if settings["copy"] == True:
                     _name = msg.contentMetadata["displayName"]
@@ -2231,7 +2370,7 @@ def lineBot(op):
                         else:
                             targets.append(copy)
                     if targets == []:
-                        nadya.sendText(msg.to, "Not Found...")
+                        nadya.sendText(msg.to, "Not found . . .")
                         pass
                     else:
                         for target in targets:
