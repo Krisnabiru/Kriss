@@ -1,2 +1,0 @@
-# Kriss
-Thanks to :
