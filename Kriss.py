@@ -129,7 +129,7 @@ def helpmessage():
                   "╠➥ GroupMemberList" + "\n" + \
                   "╠➥ GroupInfo" + "\n" + \
                   "╠➥ Kill「Tag」" + "\n" + \
-                  "╠➥ InvGroupCall"+ "\n" + \
+                  "╠➥ KillAllMember「Khusus Kriss」"+ "\n" + \
                   "║" + "\n" + \
                   "╠✪〘 Special 〙✪═══════" + "\n" + \
                   "╠➥ Mimic「On / Off」" + "\n" + \
@@ -363,14 +363,14 @@ def lineBot(op):
 #==============================================================================#
                 if text.lower() == 'help':
                     helpMessage = helpmessage()
-                    nadya.sendMessage(to, str(helpMessage), contentMetadata = {'AGENT_ICON': 'http://dl.profile.line-cdn.net/'+client.getContact(clientMid).pictureStatus, 'AGENT_NAME': 'Krisnabiru', 'AGENT_LINK': 'https://bit.ly/2skbvr2'})
+                    nadya.sendMessage(to, str(helpMessage))
                     nadya.sendContact(to, "uac44837d56e41d7aa87a08e0035f436a")
                 elif text.lower() == 'texttospeech':
                     helpTextToSpeech = helptexttospeech()
-                    nadya.sendMessage(to, str(helpTextToSpeech), contentMetadata = {'AGENT_ICON': 'http://dl.profile.line-cdn.net/'+client.getContact(clientMid).pictureStatus, 'AGENT_NAME': 'Krisnabiru', 'AGENT_LINK': 'https://bit.ly/2skbvr2'})
+                    nadya.sendMessage(to, str(helpTextToSpeech))
                 elif text.lower() == 'translate':
                     helpTranslate = helptranslate()
-                    nadya.sendMessage(to, str(helpTranslate), contentMetadata = {'AGENT_ICON': 'http://dl.profile.line-cdn.net/'+client.getContact(clientMid).pictureStatus, 'AGENT_NAME': 'Krisnabiru', 'AGENT_LINK': 'https://bit.ly/2skbvr2'})
+                    nadya.sendMessage(to, str(helpTranslate))
 #==============================================================================#
                 elif text.lower() == 'speed':
                     start = time.time()
@@ -2218,145 +2218,6 @@ def lineBot(op):
                     ret_ += "\n╚══[ Finish ]"
                     nadya.sendMessage(to, str(ret_))
                     
-#===============================================================================[NEW]                    
-                    
-            
-            elif msg.text.lower().startswith("checkpraytime "):    
-                sep = text.split(" ")
-                location = text.replace(sep[0] + " ","")
-                with requests.session() as web:
-                    web.headers["user-agent"] = random.choice(settings["userAgent"])
-                    r = web.get("http://api.corrykalam.net/apisholat.php?lokasi={}".format(urllib.parse.quote(location)))
-                    data = r.text
-                    data = json.loads(data)
-                    if data[1] != "Subuh : " and data[2] != "Dzuhur : " and data[3] != "Ashr : " and data[4] != "Maghrib : " and data[5] != "Isha : ":
-                        ret_ = "╔══[ Prayer Schedule ]"
-                        ret_ += "\n╠ Lokasi : " + data[0]
-                        ret_ += "\n╠ " + data[1]
-                        ret_ += "\n╠ " + data[2]
-                        ret_ += "\n╠ " + data[3]
-                        ret_ += "\n╠ " + data[4]
-                        ret_ += "\n╠ " + data[5]
-                        ret_ += "\n╚══[ Complete ]"
-                    else:
-                        ret_ = "[ Prayer Schedule ] Error : Lokasi tidak ditemukan" 
-                        nadya.sendMessage(to, str(ret_))
-                        
-            elif msg.text.lower().startswith("checkweather "):       
-                sep = text.split(" ")
-                location = text.replace(sep[0] + " ","")
-                with requests.session() as web:
-                    web.headers["user-agent"] = random.choice(settings["userAgent"])
-                    r = web.get("http://api.corrykalam.net/apicuaca.php?kota={}".format(urllib.parse.quote(location)))
-                    data = r.text
-                    data = json.loads(data)
-                    if "result" not in data:
-                        ret_ = "╔══[ Weather Status ]"
-                        ret_ += "\n╠ Lokasi : " + data[0].replace("Temperatur di kota ","")
-                        ret_ += "\n╠ Suhu : " + data[1].replace("Suhu : ","")
-                        ret_ += "\n╠ Kelembaban : " + data[2].replace("Kelembaban : ","")
-                        ret_ += "\n╠ Tekanan Udara : " + data[3].replace("Tekanan udara : ","")
-                        ret_ += "\n╠ Kecepatan Angin : " + data[4].replace("Kecepatan angin : ","")
-                        ret_ += "\n╚══[ Complete ]"
-                    else:
-                        ret_ = "[ Weather Status ] Error : Lokasi tidak ditemukan"
-                        nadya.sendMessage(to, str(ret_))
-                        
-            elif msg.text.lower().startswith("checklocation "):   
-                sep = text.split(" ")
-                location = text.replace(sep[0] + " ","")
-                with requests.session() as web:
-                    web.headers["user-agent"] = random.choice(settings["userAgent"])
-                    r = web.get("http://api.corrykalam.net/apiloc.php?lokasi={}".format(urllib.parse.quote(location)))
-                    data = r.text
-                    data = json.loads(data)
-                    if data[0] != "" and data[1] != "" and data[2] != "":
-                        link = "https://www.google.co.id/maps/@{},{},15z".format(str(data[1]), str(data[2]))
-                        ret_ = "╔══[ Details Location ]"
-                        ret_ += "\n╠ Lokasi : " + data[0]
-                        ret_ += "\n╠ Google Maps : " + link
-                        ret_ += "\n╚══[ Complete ]"
-                    else:
-                        ret_ = "[ Details Location ] Error : Lokasi tidak ditemukan"
-                        nadya.sendMessage(to,str(ret_))
-                # Check if only image
-                
-            elif text.lower() == 'cpp':
-                settings["changePicture"] = True
-                nadya.sendMessage(to, "Silahkan kirim gambarnya")
-                
-            elif text.lower() == 'cgp':
-                if msg.toType == 2:
-                    if to not in settings["changeGroupPicture"]:
-                        settings["changeGroupPicture"].append(to)
-                        nadya.sendMessage(to, "Silahkan kirim gambarnya")
-                
-            elif msg.contentType == 1:
-                if settings["changePicture"] == True:
-                    path = nadya.downloadObjectMsg(msg_id)
-                    settings["changePicture"] = False
-                    nadya.updateProfilePicture(path)
-                    nadya.sendMessage(to, "Berhasil mengubah foto profile")
-                if msg.toType == 2:
-                    if to in settings["changeGroupPicture"]:
-                        path = nadya.downloadObjectMsg(msg_id)
-                        settings["changeGroupPicture"].remove(to)
-                        nadya.updateGroupPicture(to, path)
-                        nadya.sendMessage(to, "Berhasil mengubah foto group")   
-                            
-            elif text.lower() == 'rejectall':
-                ginvited = nadya.ginvited
-                if ginvited != [] and ginvited != None:
-                    for gid in ginvited:
-                        nadya.rejectGroupInvitation(gid)
-                        nadya.sendMessage(to, "Berhasil tolak sebanyak {} undangan".format(str(len(ginvited))))
-                else:
-                    nadya.sendMessage(to, "Tidak ada undangan yang tertunda")
-            
-            elif text.lower() == 'invgroupcall':    
-                if msg.toType == 2:
-                    group = nadya.getGroup(to)
-                    members = [mem.mid for mem in group.members]
-                    call.acquireGroupCallRoute(to)
-                    call.inviteIntoGroupCall(to, contactIds=members)
-                    nadya.sendMessage(to, "Berhasil mengundang kedalam group call")
-                    
-            elif text.lower() == 'removeallchat':
-                nadya.removeAllMessages(op.param2)
-                nadya.sendMessage(to, "Berhasil hapus semua chat")
-
-            elif text.lower() == 'time':
-                nadya.sendMessage(to, "Goblok cek sendiri di tanggal jangan manja")
-                
-
-            elif msg.text.lower().startswith("gbroadcast "):   
-                sep = text.split(" ")
-                txt = text.replace(sep[0] + " ","")
-                groups = nadya.groups
-                for group in groups:
-                    nadya.sendMessage(group, "[ Broadcast ]\n{}".format(str(txt)))
-                    nadya.sendMessage(to, "Berhasil broadcast ke {} group".format(str(len(groups))))
-                    
-            elif msg.text.lower().startswith("fbroadcast "):   
-                sep = text.split(" ")
-                txt = text.replace(sep[0] + " ","")
-                friends = nadya.friends
-                for friend in friends:
-                    nadya.sendMessage(friend, "[ Broadcast ]\n{}".format(str(txt)))
-                    nadya.sendMessage(to, "Berhasil broadcast ke {} teman".format(str(len(friends))))
-            elif msg.text.lower().startswith("allbroadcast "):   
-                sep = text.split(" ")
-                txt = text.replace(sep[0] + " ","")
-                friends = nadya.friends
-                groups = nadya.groups
-                for group in groups:
-                    nadya.sendMessage(group, "[ Broadcast ]\n{}".format(str(txt)))
-                    nadya.sendMessage(to, "Berhasil broadcast ke {} group".format(str(len(groups))))
-                for friend in friends:
-                    nadya.sendMessage(friend, "[ Broadcast ]\n{}".format(str(txt)))
-                    nadya.sendMessage(to, "Berhasil broadcast ke {} teman".format(str(len(friends))))                             
-                                    
-#===============================================================================#
             elif msg.contentType == 13:
                 if settings["copy"] == True:
                     _name = msg.contentMetadata["displayName"]
